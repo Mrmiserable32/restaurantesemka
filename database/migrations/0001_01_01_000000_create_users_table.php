@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name',100);
             $table->string('email',100)->unique();
-            $table->string('password');
             $table->text('alamat')->nullable();
             $table->enum('status',[ 'pelanggan','admin']);
             $table->string('no_hp', 20);
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });

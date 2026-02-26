@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('pelanggan_id');
-            $table->bigInteger('meja_id');
+            $table->unsignedBigInteger('pelanggan_id');
+            $table->unsignedBigInteger('meja_id');
             $table->string('kode_booking',20)->unique();
             $table->dateTime('tgl_jam_trx')->useCurrent();
             $table->enum('status_pembayaran_dp',['pending','reserved','chekin','done','failed']);
