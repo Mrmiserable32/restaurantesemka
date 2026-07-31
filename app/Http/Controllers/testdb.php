@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class Testdb extends Controller
 {
@@ -14,7 +14,8 @@ class Testdb extends Controller
             DB::connection()->getPdo();
             return response()->json(['message' => 'Database connection successful']);
         } catch (\Exception $e) {
-            return response()->json(['message' => 'Database connection failed', 'error' => $e->getMessage()], 500);
+            Log::error('Database connection check failed', ['exception' => $e]);
+            return response()->json(['message' => 'Database connection failed'], 500);
         }
     }
 }
