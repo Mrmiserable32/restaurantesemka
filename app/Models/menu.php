@@ -2,9 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class menu extends Model
+class menu extends BaseModel
 {
-   protected $guarded = [];
 }

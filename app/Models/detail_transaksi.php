@@ -2,11 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class detail_transaksi extends Model
+class detail_transaksi extends BaseModel
 {
-
-protected $guarded= [];
-
 }
