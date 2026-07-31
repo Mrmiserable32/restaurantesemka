@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class barang extends Model
+class meja extends Model
 {
+   protected $table = 'meja';
+
    protected $guarded = [];
 }
